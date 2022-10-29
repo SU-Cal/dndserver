@@ -1,0 +1,65 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/main_nav.ejs %>
+
+<center>
+
+    <main class="container" style="width :800px">
+
+        <h1 class="display-4"><img src="/Assets/images/Logo.png" width="125" height="125"><strong><%= title %>
+                %>
+            </strong></h1>
+        <hr class="my-4">
+        <br>
+        <div class="row g-2">
+            <div class="col-md">
+                <form method="POST">
+                    <br>
+                    <!--Form for users to edit-->
+                    <div class="form-floating">
+                        <textarea
+                                  class="form-control"
+                                  id="inputFullNameBusiness"
+                                  name="name"
+                                  type="text"
+                        ><%= contact.name %> </textarea>
+                        <label for="inputFullName">Full Name</label>
+                    </div>
+
+                    <br>
+                    <div class="form-floating">
+                        <textarea
+                                  class="form-control"
+                                  id="inputEmailBusiness"
+                                  name="email"
+                        ><%= contact.email %></textarea>
+                        <label for="inputEmailBusiness">Email</label>
+                    </div>
+
+                    <br>
+
+                    <div class="form-floating">
+                        <textarea
+                                  class="form-control"
+                                  id="inputPhoneBusiness"
+                                  name="number"
+                        ><%= contact.number %></textarea>
+                        <label for="inputPhoneBusiness">Phone Number</label>
+                    </div>
+                    <br>
+
+                    <br>
+                    <button type="submit" id="" class="btn btn-secondary btn-sm">Submit</button>
+                    <br>
+                    <br>
+                    <a class="btn btn-secondary btn-sm" href="/business-contacts">Cancel</a>
+
+                </form>
+                <!--  <button href="/business-contacts" id="" class="btn btn-secondary btn-sm">Cancel</button> -->
+            </div>
+        </div>
+
+    </main>
+</center>
+
+<% include ../partials/bottom_nav.ejs %>
+<% include ../partials/footer.ejs %>

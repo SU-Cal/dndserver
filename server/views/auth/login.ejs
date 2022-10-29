@@ -1,0 +1,60 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/main_nav.ejs %>
+
+<center>
+
+    <main class="container" style="width :400px">
+
+        <h1 class="display-4"><img src="/Assets/images/Logo.png" width="125" height="125"><strong><%= title %></strong></h1>
+        <hr class="my-4">
+        <!-- Message section for login-->
+        <%if(messages.length>0) {%>
+        <div class="alert alert-danger">
+            <% messages %>
+    </div>
+        <%}%>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Please Login </h1>
+                <form method="POST" autocomplete="off">
+                    <fieldset class="form-group">
+                        <label for="username">Username: </label>
+                        <input type="text"
+                               class="form-control"
+                               name="username"
+                               placeholder="Input Username"
+                               id="username" required autofocus>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="password">Password: </label>
+                        <input type="password"
+                               class="form-control"
+                               name="password"
+                               placeholder="Input password"
+                               id="password" required autofocus>
+                        or
+                        <!--<a href="/register">Register Here</a> -->
+                    </fieldset>
+                    <br>
+
+                    <fieldset class="form-group text-right">
+                        <input type="submit"
+                               class="btn btn-success"
+                               value="Login">
+                        <a href="/">
+                            <input type="button"
+                                   class="btn btn-warning"
+                                   value="Cancel">
+                        </a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
+</center>
+
+
+<% include  ../partials/bottom_nav.ejs %>
+
+<% include ../partials/footer.ejs %>

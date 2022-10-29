@@ -1,0 +1,77 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/main_nav.ejs %>
+
+<center>
+
+    <main class="container" style="width :500px">
+
+        <h1 class="display-4"><img src="/Assets/images/Logo.png" width="125" height="125"><strong><%= title %></strong></h1>
+        <hr class="my-4">
+        <!-- Message section for login-->
+        <%if(messages.length>0) {%>
+            <div class="alert alert-danger">
+                <% messages %>
+            </div>
+        <%}%>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Register Here </h1>
+                <form method="POST" autocomplete="off">
+                    <fieldset class="form-group">
+                        <label for="username">Username: </label>
+                        <input type="text"
+                               class="form-control"
+                               name="username"
+                               placeholder="Enter your username"
+                               id="username" required autofocus>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="password">Password: </label>
+                        <input type="password"
+                               class="form-control"
+                               name="password"
+                               placeholder="Enter your password"
+                               id="password" required autofocus>
+                    </fieldset>
+
+                        <fieldset class="form-group">
+                            <label for="email">Email: </label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="email"
+                                   placeholder="Enter Email Address"
+                                   id="email" required autofocus>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="displayName">Display Name: </label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="displayName"
+                                   placeholder="Enter Display Name"
+                                   id="displayName" required autofocus>
+
+                    </fieldset>
+
+                    <br>
+                    <br>
+                    <fieldset class="form-group text-right">
+                        <input type="submit"
+                               class="btn btn-success"
+                               value="Register">
+                        <a href="/">
+                            <input type="button"
+                                   class="btn btn-warning"
+                                   value="Cancel">
+                        </a>
+                    </fieldset>
+
+
+                </form>
+            </div>
+        </div>
+    </main>
+</center>
+<% include  ../partials/bottom_nav.ejs %>
+
+<% include ../partials/footer.ejs %>

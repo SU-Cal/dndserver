@@ -1,0 +1,77 @@
+<!-- Nav Section-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container-fluid">
+
+        <!-- Hamburger menu for mobile/small viewer compatability-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent" style="font-size: 150%">
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <% if (title == "Home"){%>
+                        <a class="nav-link active" aria-current="page" href="/home"> <i class=" fas fa-lg  fa-house "></i> Home</a>
+                    <%} else { %>
+                        <a class="nav-link" aria-current="page" href="/home"> <i class=" fas fa-lg  fa-house "></i> Home</a>
+                    <% } %>
+                </li>
+
+                <li class="nav-item">
+                    <% if (title == "Species") {%>
+                        <a class="nav-link active" href="/species"> <i class="fas fa-light fa-lg fa-circle-info"></i> Species</a>
+                    <%} else { %>
+                        <a class="nav-link" href="/species"> <i class="fas fa-light fa-lg fa-circle-info"></i> Species</a>
+                    <% } %>
+                </li>
+
+                <li class="nav-item">
+                    <% if (title == "Gods") {%>
+                        <a class="nav-link active" href="/Gods"> <i class="fas fa-lg  fa-keyboard"></i> Gods</a>
+                    <%} else { %>
+                        <a class="nav-link" href="/Gods"> <i class="fas fa-lg  fa-keyboard"></i> Gods</a>
+                    <% } %>
+                </li>
+
+                <li class="nav-item">
+                    <% if (title == "Places and Regions") {%>
+                        <a class="nav-link active" href="/regions"> <i class="fas fa-light fa-lg  fa-bell-concierge"></i> My Services</a>
+                    <%} else { %>
+                        <a class="nav-link" href="/regions"> <i class="fas fa-light fa-lg  fa-bell-concierge"></i> My Services</a>
+                    <% } %>
+                </li>
+
+                <li class="nav-item">
+                    <% if (title == "Business Contacts List") {%>
+                        <a class="nav-link active" href="/business-contacts"> <i class="fas fa-light fa-lg fa-address-book "></i> Business Contacts List</a>
+                    <%} else { %>
+                        <a class="nav-link" href="/business-contacts"> <i class="fas fa-light fa-lg  fa-address-book"></i> Business Contacts List</a>
+                    <% } %>
+                </li>
+
+                <li class="nav-item">
+                    <% if (title == "Contact Me") {%>
+                        <a class="nav-link active" href="/contact"> <i class="fas fa-lg  fa-comments"></i> Contact Me</a>
+                    <%} else { %>
+                        <a class="nav-link" href="/contact"> <i class="fas fa-lg  fa-comments"></i> Contact Me</a>
+                    <% } %>
+                </li>
+
+               <%if (typeof displayName == 'string' && displayName) { %>
+
+                    <a style="pointer-events: none; text-decoration: none;" class="navbar-text"> <li class="fas fa-lg fa-user"></li>  Hey, <%= displayName %> &nbsp;</a>
+
+                    <a style="text-decoration: none;" href="/logout" class="navbar-text"> <li class="fas fa-lg fa-sign-in-alt"></li>  Logout </a>
+                <%} else{%>
+
+                        <a style="text-decoration: none;" href="/login" class="navbar-text"> <li class="fas fa-lg fa-sign-in-alt"></li>  Login </a>
+
+                <% } %>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
